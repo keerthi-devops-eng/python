@@ -29,6 +29,10 @@ def numCells(grid):
     
     for i in range(rows):
         for j in range(columns):
+            # if (i == rows - 1 or grid[i][j] > grid[i+1][j]) and \
+            #    (j == columns -1 or grid[i][j] > grid[i][j+1]) and \
+            #    (i == 0 or grid[i][j] > grid[i-1][j]) and \
+            #    (j == 0 or grid[i][j] > grid[i][j-1]):
             isdominant = True
             for x in range(max(0, i-1), min(rows, i+2)):
                 for y in range(max(0, j-1), min(columns, j+2)):
